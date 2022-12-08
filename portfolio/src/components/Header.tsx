@@ -5,26 +5,51 @@ const HeaderBox = styled.div`
   width: 1480px;
   height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: 'LINESeedKR-Bd';
+  position: fixed;
+  top: 0;
 `
 const Logo = styled.div`
-  width: 1480px;
-  height: 100px;
+  width: 740px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  & > a {
+    text-decoration-line: none;
+  }
+  & > a:link {
+    color: #31326B;
+  }
+  & > a:visited {
+    color: #31326B;
+  }
 `
 const Menu = styled.div`
-  width: 1480px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 780px;
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  }
+  & > ul > a {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    text-decoration-line: none;
+  }
+  & > ul > a:link {
+    color: #31326B;
+  }
+  & > ul > a:visited {
+    color: #31326B;
+  }
 `
+
 const Header = () => {
   return (
     <>
@@ -36,13 +61,22 @@ const Header = () => {
         </Logo>
         <Menu>
           <ul>
-            <li>ABOUT ME</li>
-            <li>RESUME</li>
-            <li>PROJECTS</li>
-            <li>CONTACT</li>
+            <Link to='/about'>
+              <li>ABOUT ME</li>
+            </Link>
+            <Link to='/resume'>
+              <li>RESUME</li>
+            </Link>
+            <Link to='/project'>
+              <li>PROJECTS</li>
+            </Link>
+            <Link to='/contact'>
+              <li>CONTACT</li>
+            </Link>
           </ul>
         </Menu>
       </HeaderBox>
+      <Outlet />
     </>
   )
 }
