@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import Language from '../../components/common/Language';
+import HomeText from '../../components/common/HomeText';
 
 const Wrapper = styled.div`
   width: 1480px;
-  margin-top: 100px;
-  margin-bottom: 70px;
+  margin-top: 120px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,27 +20,15 @@ const Profile = styled.div`
   background-color: #B7B6E0;
   border-radius: 60px;
 `
-const Intro = styled.div`
-  width: 500px;
-  height: 700px;
-  margin-left: 50px;
-  background-color: #909090;
-`
 
 const Home = () => {
   return (
     <Wrapper>
-      <Profile>
-      </Profile>
-      <Intro>
-        <p>hello</p>
-        <p>introduce</p>
-        <div>
-          <div>KOREAN</div>
-          <div>JAPANESE</div>
-        </div>
-        <p>Korean or Japanese text</p>
-      </Intro>
+      <Profile />
+      <div>
+        <Language />
+        <HomeText />
+      </div>
     </Wrapper>
   )
 }

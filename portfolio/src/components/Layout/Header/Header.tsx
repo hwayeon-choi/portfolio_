@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderBox = styled.div`
@@ -52,32 +52,29 @@ const Menu = styled.div`
 
 const Header = () => {
   return (
-    <>
-      <HeaderBox>
-        <Logo>
-          <Link to='/'>
-            <p>HWAYEON CHOI / FRONTEND DEVELOPER</p>
+    <HeaderBox>
+      <Logo>
+        <Link to='/'>
+          <p>HWAYEON CHOI / FRONTEND DEVELOPER</p>
+        </Link>
+      </Logo>
+      <Menu>
+        <ul>
+          <Link to='/about'>
+            <li>ABOUT ME</li>
           </Link>
-        </Logo>
-        <Menu>
-          <ul>
-            <Link to='/about'>
-              <li>ABOUT ME</li>
-            </Link>
-            <Link to='/resume'>
-              <li>RESUME</li>
-            </Link>
-            <Link to='/project'>
-              <li>PROJECTS</li>
-            </Link>
-            <Link to='/contact'>
-              <li>CONTACT</li>
-            </Link>
-          </ul>
-        </Menu>
-      </HeaderBox>
-      <Outlet />
-    </>
+          <Link to='/resume'>
+            <li>RESUME</li>
+          </Link>
+          <Link to='/project'>
+            <li>PROJECTS</li>
+          </Link>
+          <Link to='/contact'>
+            <li>CONTACT</li>
+          </Link>
+        </ul>
+      </Menu>
+    </HeaderBox>
   )
 }
 

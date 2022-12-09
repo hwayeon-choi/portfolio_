@@ -10,7 +10,7 @@ import ContactContainer from "../containers/Pages/ContactContainer";
 const App = () => {
   return (
     <Layout>
-        <Routes>
+      <Routes>
         <Route path="/" element={<HomeContainer />} />
         <Route path="/about" element={<AboutContainer />} />
         <Route path="/resume" element={<ResumeContainer />} />
