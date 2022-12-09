@@ -26,7 +26,7 @@ const Intro = styled.div`
   background-color: #909090;
 `
 
-const Main = () => {
+const Home = () => {
   return (
     <Wrapper>
       <Profile>
@@ -44,4 +44,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default Home;
