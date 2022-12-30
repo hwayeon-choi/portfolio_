@@ -12,12 +12,14 @@ const FooterBox = styled.div`
   bottom: 0;
   background-color: #31326B;
   & > div {
-    width: 250px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-size: 0.75rem;
+    margin: 30px;
   }
 `
 
