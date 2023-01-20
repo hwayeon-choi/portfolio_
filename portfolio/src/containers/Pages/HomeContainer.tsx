@@ -1,6 +1,32 @@
+import { createContext } from 'react';
 import styled from 'styled-components';
 import Language from '../../components/common/Language';
 import HomeText from '../../components/common/HomeText';
+
+const LngContext = createContext();
+
+function LngProvider({ children }: any) {
+  const LngState = useState("kor");
+  return (
+    <LngContext.Provider>
+      {children}
+    </LngContext.Provider>
+  );   
+}
+
+const Home = () => {
+  return (
+    <Wrapper>
+      <Profile />
+      <LngProvider>
+        <div>
+          <Language />
+          <HomeText />
+        </div>
+      </LngProvider>
+    </Wrapper>
+  )
+}
 
 const Wrapper = styled.div`
   width: 1480px;
@@ -23,17 +49,5 @@ const Profile = styled.div`
   background-color: #B7B6E0;
   border-radius: 60px;
 `
-
-const Home = () => {
-  return (
-    <Wrapper>
-      <Profile />
-      <div>
-        <Language />
-        <HomeText />
-      </div>
-    </Wrapper>
-  )
-}
 
 export default Home;

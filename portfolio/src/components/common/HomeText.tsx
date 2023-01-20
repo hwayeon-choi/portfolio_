@@ -1,4 +1,15 @@
+import { useContext } from 'react';
+import text from '../../text/text.json';
 import styled from 'styled-components';
+
+const HomeText = () => {
+  
+  return (
+    <HomeTextBox>
+      {text.kor}
+    </HomeTextBox>
+  )
+}
 
 const HomeTextBox = styled.div`
   width: 300px;
@@ -28,13 +39,5 @@ const HomeTextBox = styled.div`
     border: 1px solid black;
   }
 `
-
-const HomeText = () => {
-
-  return (
-    <HomeTextBox>
-    </HomeTextBox>
-  )
-}
 
 export default HomeText;
